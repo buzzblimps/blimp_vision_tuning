@@ -11,7 +11,7 @@ def generate_launch_description():
             executable='usb_cam_node_exe',
             name='usb_cam_node',
             namespace='MaryO',
-            parameters=[os.path.join(get_package_share_directory('blimp_vision'), 'param', 'elp_config.yaml')],
+            parameters=[os.path.join(get_package_share_directory('blimp_vision_tuning'), 'param', 'elp_config.yaml')],
             output='screen'
         ),
         Node(

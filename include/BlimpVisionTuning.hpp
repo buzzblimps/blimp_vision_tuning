@@ -16,12 +16,16 @@
 #include <opencv2/ximgproc.hpp>
 #include <opencv2/ximgproc/disparity_filter.hpp>
 
+#include "ComputerVision.h"
+
 class BlimpVisionTuning : public rclcpp::Node {
 private:
     rclcpp::Subscription<sensor_msgs::msg::CompressedImage>::SharedPtr comp_img_subscriber_;
     rclcpp::TimerBase::SharedPtr timer_;
 
     int frame_count_;
+
+    ComputerVision computerVision;
 
     void timer_callback();
 

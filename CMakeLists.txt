@@ -18,6 +18,7 @@ add_executable(
     ${PROJECT_NAME}_node
     src/blimp_vision_tuning_node.cpp
     src/BlimpVisionTuning.cpp
+    src/ComputerVision.cpp
     include/BlimpVisionTuning.hpp
 )
 
@@ -47,9 +48,9 @@ install(
     DESTINATION share/${PROJECT_NAME}/
 )
 
-# install(
-#     DIRECTORY param
-#     DESTINATION share/${PROJECT_NAME}/
-# )
+install(
+    DIRECTORY param
+    DESTINATION share/${PROJECT_NAME}/
+)
 
 ament_package()
