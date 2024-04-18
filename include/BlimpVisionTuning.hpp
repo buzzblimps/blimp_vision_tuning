@@ -15,6 +15,7 @@
 #include <opencv2/imgcodecs.hpp>
 #include <opencv2/ximgproc.hpp>
 #include <opencv2/ximgproc/disparity_filter.hpp>
+#include "fstream"
 
 #include "ComputerVision.h"
 
@@ -33,9 +34,12 @@ private:
     // void image_callback(const sensor_msgs::msg::Image::ConstSharedPtr &image_msg, const sensor_msgs::msg::CameraInfo::ConstSharedPtr &info_msg);
 
     void compressed_image_callback(const sensor_msgs::msg::CompressedImage::SharedPtr comp_img_msg);
+    void initColorDetection();
+    void CallBackFunc(int event, int x, int y, int flags, void* userdata);
 
 public:
     BlimpVisionTuning();
+    
 };
 
 #endif
